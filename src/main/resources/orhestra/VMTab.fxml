@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="orhestra.controller.VMController">
+    <HBox spacing="20" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+
+        <!-- Левая колонка: IP-адреса -->
+        <VBox spacing="10">
+            <Label text="Виртуальные машины (IP-адреса):"/>
+            <VBox fx:id="vmListBox" spacing="10"/>
+            <Button text="+ Добавить IP" onAction="#addVmIpField"/>
+        </VBox>
+
+        <!-- Правая колонка: выбор файлов и запуск -->
+        <VBox spacing="10" HBox.hgrow="ALWAYS">
+
+            <!-- Выбор JAR -->
+            <HBox spacing="10">
+                <Button text="Выбрать JAR" onAction="#selectJar"/>
+                <Label fx:id="jarLabel" text="Файл не выбран"/>
+            </HBox>
+
+            <!-- Загрузка функций -->
+            <HBox spacing="10">
+                <Button text="Загрузить функции (JSON)" onAction="#selectFunctionsJson"/>
+                <Label fx:id="functionsLabel" text="Файл не выбран"/>
+            </HBox>
+
+            <!-- Загрузка параметров -->
+            <HBox spacing="10">
+                <Button text="Загрузить параметры (JSON)" onAction="#selectParamsJson"/>
+                <Label fx:id="paramsLabel" text="Файл не выбран"/>
+            </HBox>
+
+            <!-- Режим и запуск -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <CheckBox fx:id="singleVMCheckBox" text="Запускать всё на одной ВМ" selected="true"/>
+                <Button text="▶ Запустить" onAction="#runAllTasks"/>
+            </HBox>
+
+            <!-- Вывод -->
+            <TextArea fx:id="outputArea" prefHeight="400" wrapText="true"/>
+
+        </VBox>
+
+    </HBox>
+</AnchorPane>
+
+
+

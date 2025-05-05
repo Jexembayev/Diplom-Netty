@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="orhestra.controller.MainController">
+
+    <center>
+        <HBox spacing="20">
+            <!-- Левая панель: IP-адреса -->
+            <VBox spacing="10">
+                <Label text="🖥 Виртуальные машины (IP-адреса)" />
+                <VBox fx:id="vmListBox" spacing="5" />
+                <Button text="➕ Добавить IP" onAction="#addVmIpField" />
+            </VBox>
+
+            <!-- Правая панель: настройки -->
+            <VBox spacing="10">
+                <HBox spacing="10">
+                    <Button text="Выбрать JAR алгоритма" onAction="#selectJar" />
+                    <Label fx:id="jarLabel" text="Файл не выбран" />
+                    <Button text="📤 Загрузить JAR на все ВМ" onAction="#uploadJarToAllVMs" />
+                </HBox>
+
+                <HBox spacing="10">
+                    <Button text="Загрузить функции (JSON)" onAction="#selectFunctionsJson" />
+                    <Label fx:id="functionsLabel" text="Файл не выбран" />
+                </HBox>
+
+                <HBox spacing="10">
+                    <Button text="Загрузить параметры (JSON)" onAction="#selectParamsJson" />
+                    <Label fx:id="paramsLabel" text="Файл не выбран" />
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Режим:" />
+                    <ChoiceBox fx:id="modeChoiceBox" prefWidth="250" />
+                    <Button text="🚀 Запустить" onAction="#runTasks" />
+                </HBox>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <TextArea fx:id="outputArea" wrapText="true" prefHeight="150" />
+            <ScrollPane fx:id="progressScrollPane" fitToWidth="true" prefHeight="300">
+                <HBox fx:id="vmBlocksContainer" spacing="20">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </HBox>
+            </ScrollPane>
+        </VBox>
+    </bottom>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+</BorderPane>
+
+
+
+
+
+
+
