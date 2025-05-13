@@ -1,4 +1,4 @@
-package orhestra.model;
+package orhestra.algoTab.model;
 
 public record ResultRow(String function, int nAgents, int dim, int nIterations, String fitness) {
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="orhestra.controller.CreateVmTabController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Button fx:id="loadIniButton" text="📄 Загрузить .ini файл конфигурации" />
+        <Button fx:id="loadVmButton" text="🔍 Показать ВМ из папки" />
+        <Button fx:id="sendIpsButton" text="📤 Отправить IP во вкладку Алгоритм" />
+    </HBox>
+
+    <TextArea fx:id="logArea" prefHeight="200" wrapText="true" />
+    <Label text="📋 Статус создаваемых ВМ" />
+
+    <TableView fx:id="vmTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="VM Name" />
+            <TableColumn fx:id="statusColumn" text="Status" />
+            <TableColumn fx:id="ipColumn" text="Public IP" />
+            <TableColumn fx:id="imageColumn" text="Image ID" />
+            <TableColumn fx:id="configColumn" text="Configuration" />
+            <TableColumn fx:id="coresColumn" text="CPU Cores"/>
+            <TableColumn fx:id="memoryColumn" text="RAM (GB)"/>
+            <TableColumn fx:id="diskColumn" text="Disk (GB)"/>
+            <TableColumn fx:id="javaColumn" text="Java Version"/>
+            <TableColumn fx:id="serverColumn" text="Server Running"/>
+            <TableColumn fx:id="actionColumn" text="Actions"/>
+            <TableColumn fx:id="useColumn" text="✅ Использовать" />
+        </columns>
+    </TableView>
+
+    <VBox fx:id="vmListBox" spacing="5" />
+</VBox>
+
+
+
+
+

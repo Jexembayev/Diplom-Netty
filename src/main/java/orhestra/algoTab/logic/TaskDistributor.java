@@ -1,12 +1,12 @@
-package orhestra.logic;
+package orhestra.algoTab.logic;
 
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import orhestra.model.OptimizationTask;
-import orhestra.model.ResultRow;
+import orhestra.algoTab.model.OptimizationTask;
+import orhestra.algoTab.model.ResultRow;
 
 import java.util.List;
 import java.util.Map;

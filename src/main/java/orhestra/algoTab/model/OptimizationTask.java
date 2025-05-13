@@ -1,4 +1,4 @@
-package orhestra.model;
+package orhestra.algoTab.model;
 
 public class OptimizationTask {
     private final String function;

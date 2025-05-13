@@ -1,8 +1,7 @@
-package orhestra.controller;
+package orhestra.algoTab.service;
 
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
-import orhestra.service.VmHttpService;
 
 import java.io.File;
 import java.util.Map;

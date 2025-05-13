@@ -1,15 +1,23 @@
 module orhestra {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.genproto;
+    requires com.google.protobuf;
     requires jsch;
     requires com.hierynomus.sshj;
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.databind;
     requires java.net.http;
+    requires java.sdk.services;
+    requires java.sdk.auth;
+    requires ini4j;
+    requires grpc.api;
 
     opens orhestra.app to javafx.fxml;
     opens orhestra.controller to javafx.fxml;
+    opens orhestra.algoTab.service to javafx.fxml;
+    opens orhestra.createVmTab.service to javafx.fxml;
 
     exports orhestra.app;
-    opens orhestra.service to javafx.fxml;
 }
+

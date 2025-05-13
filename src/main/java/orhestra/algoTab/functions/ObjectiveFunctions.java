@@ -1,4 +1,4 @@
-package orhestra.functions;
+package orhestra.algoTab.functions;
 
 public class ObjectiveFunctions {
 

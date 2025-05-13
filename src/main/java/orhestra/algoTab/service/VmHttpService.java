@@ -1,7 +1,7 @@
-package orhestra.service;
+package orhestra.algoTab.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import orhestra.model.OptimizationTask;
+import orhestra.algoTab.model.OptimizationTask;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

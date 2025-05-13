@@ -1,4 +1,4 @@
-package orhestra.controller;
+package orhestra.algoTab.service;
 
 import javafx.stage.FileChooser;
 import javafx.stage.Window;

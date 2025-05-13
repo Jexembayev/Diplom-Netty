@@ -1,8 +1,8 @@
-package orhestra.service;
+package orhestra.algoTab.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import orhestra.model.OptimizationTask;
+import orhestra.algoTab.model.OptimizationTask;
 
 import java.io.File;
 import java.util.ArrayList;

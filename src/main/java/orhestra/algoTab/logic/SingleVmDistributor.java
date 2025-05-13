@@ -1,14 +1,13 @@
-package orhestra.logic;
+package orhestra.algoTab.logic;
 
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import orhestra.model.OptimizationTask;
-import orhestra.model.ResultRow;
-import orhestra.service.TaskExecutionService;
+import orhestra.algoTab.model.OptimizationTask;
+import orhestra.algoTab.model.ResultRow;
+import orhestra.algoTab.service.TaskExecutionService;
 
 import java.util.List;
 import java.util.Map;
@@ -41,12 +40,18 @@ public class SingleVmDistributor implements TaskDistributor {
 
         for (OptimizationTask task : tasks) {
             executionService.executeTask(
-                    task, ip, jarPath,
-                    grid, vmTimeTotals,
-                    timeLabel,
-                    outputArea, allResults,
-                    onAllComplete, tasks.size()
+                    task,
+                    ip,
+                    jarPath,
+                    vmGrids,
+                    vmTimeTotals,
+                    timeLabels, // <--- добавили!
+                    outputArea,
+                    allResults,
+                    onAllComplete,
+                    tasks.size()
             );
+
 
 
         }
