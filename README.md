@@ -3,7 +3,6 @@ OAUTH_TOKEN(из яндекса)
 CLOUD_ID(из яндекса)
 
 
-
 Есть метод, который по хоршему тоже вынести в конфиг, путь и имя
 
 SshExecutor.restartNettyServer(
